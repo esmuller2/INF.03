@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 01 Cze 2022, 09:42
--- Wersja serwera: 10.4.22-MariaDB
--- Wersja PHP: 8.1.2
+-- Generation Time: Paź 18, 2024 at 12:06 PM
+-- Wersja serwera: 10.4.32-MariaDB
+-- Wersja PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `kadra`
+-- Database: `baza`
 --
 
 -- --------------------------------------------------------
@@ -34,27 +34,27 @@ CREATE TABLE `pracownicy` (
   `nazwisko` varchar(30) DEFAULT NULL,
   `pensja` int(10) UNSIGNED DEFAULT NULL,
   `staz` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Zrzut danych tabeli `pracownicy`
+-- Dumping data for table `pracownicy`
 --
 
 INSERT INTO `pracownicy` (`id`, `stanowiska_id`, `imie`, `nazwisko`, `pensja`, `staz`) VALUES
-(1, 1, 'Krzysztof', 'Dobromilski', 8000, 30),
-(2, 3, 'Ewa', 'Nowak', 5000, 20),
-(3, 2, 'Joanna', 'Trojanowska', 6000, 15),
-(4, 4, 'Jan', 'Nowacki', 5050, 10),
-(5, 4, 'Ewelina', 'Kowal', 5000, 5),
-(6, 4, 'Grzegorz', 'Kowalski', 5000, 5),
-(7, 4, 'Janusz', 'Kos', 4700, 1),
-(8, 4, 'Andżelika', 'Lawendowska', 4700, 2),
-(9, 2, 'Konrad', 'Grzegorzewski', 6000, 13),
-(10, 5, 'Jolanta', 'Trębosz', 4000, 10),
-(11, 5, 'Michał', 'Tyniec', 4000, 9),
-(12, 5, 'Joachim', 'Teterycz', 4000, 8),
-(13, 5, 'Krzysztof', 'Gołębiowski', 3800, 5),
-(14, 5, 'Adam', 'Sośnicki', 3800, 5);
+(1, 1, 'Krzysztof', 'Dobromilski', 8000, 31),
+(2, 3, 'Ewa', 'Nowak', 5000, 21),
+(3, 2, 'Joanna', 'Trojanowska', 6000, 16),
+(4, 4, 'Jan', 'Nowacki', 5050, 11),
+(5, 4, 'Ewelina', 'Kowal', 5000, 6),
+(6, 4, 'Grzegorz', 'Kowalski', 5000, 6),
+(7, 4, 'Janusz', 'Kos', 4700, 2),
+(8, 4, 'Andżelika', 'Lawendowska', 4700, 3),
+(9, 2, 'Konrad', 'Grzegorzewski', 6000, 14),
+(10, 5, 'Jolanta', 'Trębosz', 4000, 11),
+(11, 5, 'Michał', 'Tyniec', 4000, 10),
+(12, 5, 'Joachim', 'Teterycz', 4000, 9),
+(13, 5, 'Krzysztof', 'Gołębiowski', 3800, 6),
+(14, 5, 'Adam', 'Sośnicki', 3800, 6);
 
 -- --------------------------------------------------------
 
@@ -65,10 +65,10 @@ INSERT INTO `pracownicy` (`id`, `stanowiska_id`, `imie`, `nazwisko`, `pensja`, `
 CREATE TABLE `stanowiska` (
   `id` int(10) UNSIGNED NOT NULL,
   `nazwa` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Zrzut danych tabeli `stanowiska`
+-- Dumping data for table `stanowiska`
 --
 
 INSERT INTO `stanowiska` (`id`, `nazwa`) VALUES
@@ -95,17 +95,17 @@ ALTER TABLE `stanowiska`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT dla zrzuconych tabel
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT dla tabeli `pracownicy`
+-- AUTO_INCREMENT for table `pracownicy`
 --
 ALTER TABLE `pracownicy`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT dla tabeli `stanowiska`
+-- AUTO_INCREMENT for table `stanowiska`
 --
 ALTER TABLE `stanowiska`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

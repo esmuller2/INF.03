@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Efekty obrazu</title>
+        <link rel="stylesheet" href="styl.css">
+    </head>
+    <body>
+
+        <header>
+            <h2>Efekty na obrazach</h2>
+        </header>
+
+        <div id="blok1">
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pszczola"><br>
+            <label><input type="radio" name="efekt" value="blur" id="blur" name="blur"> Blur</label><br>
+            <label><input type="radio" name="efekt" value="sepia" id="sepia" name="sepia"> Sepia</label><br>
+            <label><input type="radio" name="efekt" value="negatyw" id="negatyw" name="negatyw"> Negatyw</label><br>
+            <button onclick="zastosuj()">Zastosuj</button>
+        </div>
+
+        <div id="blok2">
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="owoce"><br>
+            <button onclick="kolorowy()">Kolorowy</button>
+            <button onclick="czarnobialy()">Czarno-Biały</button>
+        </div>
+
+        <div id="blok3">
+            <img src="owoce.jpg" alt="Kosz pełen owoców"><br>
+            <input type="range" min="0" max="100" value="100" id="przezroczystosc" name="przezroczystosc"><br>
+            <button onclick="przezroczystosc()">Zastosuj</button>
+        </div>
+
+        <div id="blok4">
+            <img src="zolw.jpg" alt="Żółw w wodzie"><br>
+            <input type="range" min="0" max="250" id="jasnosc" name="jasnosc"><br>
+            <button onclick="jasnosc()">Zastosuj</button>
+        </div>
+
+        <footer>
+            <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+            <p>Stronę wykonał: <a href="https://ee-informatyk.pl/" target="_blank" style="color: unset;text-decoration: none;">EE-Informatyk.pl</a></p>
+        </footer>
+
+    </body>
+    <script src="skrypt.js"></script>
+</html>
